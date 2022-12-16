@@ -1,12 +1,12 @@
 package learn.spring.studentmanagementsystemcrud.Controller;
 
 import learn.spring.studentmanagementsystemcrud.Service.StudentService;
-import learn.spring.studentmanagementsystemcrud.Service.StudentServiceImpl;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
+@Controller
 public class StudentController {
     // A controller for student to handle requests
     private StudentService service;
@@ -16,10 +16,10 @@ public class StudentController {
 
 
     //get all students
-    @GetMapping("/students")
+    @RequestMapping("/students")
      String getAllStudents(Model model){ // create a model  to send data betn view and controller
         model.addAttribute("students",service.getAllStudents());
-        return "students";
+        return "students.html"; // returns a students view which should be created inside templates
     }
 
 }
