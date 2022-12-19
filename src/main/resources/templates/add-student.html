@@ -90,6 +90,11 @@
             background: #7c8490;
         }
 
+        button{
+            margin-right: 50px;
+            margin-left: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -124,7 +129,7 @@
 <div class="container" style="padding-top: 20px">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-            <h1 class="text-center" style="padding-top: 10px">Create New Student</h1>
+            <h1 class="text-center" style="padding-top: 10px">Add New Student to SMS</h1>
             <div class="card-body">
                 <form th:action="@{/students}" th:object="${student}" method="post">
                     <div class="form-group">
@@ -139,12 +144,15 @@
                             <label>Email address</label>
                             <input required type="email" class="form-control" th:field="*{email}" aria-describedby="emailHelp" placeholder="Enter email">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
+                        </div> <br>
                         <div class="form-check footer-body">
                             <button type="submit" class="btn btn-primary "><i class="fas fa-user-plus ml-2"> Add Student </i></button>
+                            <button type="reset" class="btn btn-warning"><i class="fa fa-remove ml-2">Clear All</i> </button>
                         </div>
 
                 </form>
+                <br>
+                <center> <h4>Go Back to <a th:href="@{/students}">Lists Of Students</a>  </h4></center>
             </div>
         </div>
     </div>
