@@ -7,5 +7,9 @@ import java.util.List;
 public interface StudentService {
     // a service interface layer to provide services to other for loose coupling
     List<Student> getAllStudents();
-    Student getStudentById();
+    Student addStudent(Student student);
+
+    void deleteStudent(long id);
+
+
 }
