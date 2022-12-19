@@ -43,6 +43,23 @@ public class StudentController {
         return "redirect:/students";
     }
 
+    @GetMapping("students/update/{id}")
+    String updateStudentForm(@PathVariable("id")Long id, Model model) throws Exception{
+        Student student = new Student();
+        model.addAttribute("student", service.getStudentById(id));
+        return "update-student";
+    }
+    @PostMapping("students/{id}")
+    String editStudent(@PathVariable Long id,@ModelAttribute("student") Student student){
+        Student existingStudent = service.getStudentById(id); // get existing student to update existing data
 
+        existingStudent.setId(id);
+        existingStudent.setfName(student.getfName());
+        existingStudent.setlName(student.getlName());
+        existingStudent.setEmail(student.getEmail());
+
+        service.updateStudent(existingStudent); //fetch to  update the existing student
+        return "redirect:/students";
+    }
 
 }

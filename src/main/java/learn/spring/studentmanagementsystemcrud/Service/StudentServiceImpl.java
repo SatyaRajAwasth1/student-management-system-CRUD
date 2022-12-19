@@ -22,10 +22,24 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getAllStudents() {
         return studentRepository.findAll(); //findAll() returns list of the <Entity>
     }
+    @Override
+    public Student getStudentById(Long id){ // get a reference student by id
+        return studentRepository.getReferenceById(id);
+    }
 
     @Override
-    public Student getStudentById() {
-        return null;
+    public Student addStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
+    @Override
+    public void deleteStudent(Long id) {
+         studentRepository.deleteById(id);
+    }
+
+    @Override
+    public Student updateStudent(Student student) { // edit and update student if exist otherwise add new
+        return studentRepository.save(student);
     }
 
 }
