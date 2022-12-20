@@ -1,5 +1,5 @@
 # student-management-system-CRUD
-A simple CRUD student management system.
+This student-management-system-CRUD  is a simple CRUD application for Student Management System. Written using Java and Spring Boot MVC, Spring Data JPA , MYSQL and Thymeleaf Template Engine using which one can add new student to the list, see all the student, edit existing student and delete the student.
 
 ### Create
 ![image](https://user-images.githubusercontent.com/77236280/208498125-cef78bbf-a63f-4386-b8ac-752d5507db21.png)
