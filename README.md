@@ -16,5 +16,29 @@ Before Delete:
 After Delete: 
 ![image](https://user-images.githubusercontent.com/77236280/208498590-d2226c39-0827-40a6-bf44-ac6db1b23ad5.png)
 
+## Personal goals
+* Learn to develop and implement CRUD and REST services using Spring MVC (Boot)
+* Understanding configuration and execution of spring framework
+* Performing CRUD operations using Spring Boot Hibernate data jpa
+
+## Technologies Used
+ #### Backend
+  + Java 17 (Open JDK)
+  + Spring Boot
+  + Hibernate JPA
+ #### Template Engine
+  + Thymeleaf
+ #### Frontend
+  + Html 
+  + CSS
+  + Bootstrap 
+ #### Database
+  + MYSQL database
+  
+ #### Dependency Management Tool
+  + Maven
+ 
+ #### IDE
+  + Intellij-Idea 
 
 
