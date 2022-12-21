@@ -1,0 +1,8 @@
+// File for information
+Questions to be seen:
+1. How should i know how many bean am i needing ? (construcor or setter injection ) / how much injections
+2. Difference between *{variablename} and ${varname} when to use them
+3. thymeleaf tags
+
+#Things learned:
+Model object in java
